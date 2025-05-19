@@ -12,6 +12,7 @@ class Boss extends Worker {
 }
 
 const boss = new Boss("Maks", "Saimon", 5000, 28, 8);
+
 console.log(boss.name);
 console.log(boss.surname);
 console.log(boss.getFullName());
