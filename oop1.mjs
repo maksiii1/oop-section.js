@@ -17,7 +17,10 @@ class Worker {
 
 const URL = process.argv[1].replace(/\\/g, "/");
 
-if (import.meta.url === "file:///" + URL) {
+if (
+  import.meta.url === "file:///" + URL ||
+  import.meta.url === "file:///" + process.argv[1]
+) {
   const worker = new Worker("Maks", "Saimon", 5000, 28);
 
   console.log(worker.name);
